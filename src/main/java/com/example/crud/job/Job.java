@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -21,4 +21,9 @@ public class Job {
     private String name;
     @Column(name = "job_salary")
     private String salary;
+
+    public Job(String name, String salary) {
+        this.name = name;
+        this.salary = salary;
+    }
 }

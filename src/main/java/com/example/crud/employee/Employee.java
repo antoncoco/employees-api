@@ -15,7 +15,7 @@ import java.time.Period;
 public class Employee {
     @Id
     @Column(name = "emp_rfc")
-    private Long rfc;
+    private String rfc;
     @Column(name = "emp_name")
     private String name;
     @Column(name = "emp_lastname")
@@ -31,7 +31,7 @@ public class Employee {
     @JoinColumn(name = "emp_job")
     private Job job;
 
-    public Employee(Long rfc, String name, String lastname, String email, LocalDate birthday, Job job) {
+    public Employee(String rfc, String name, String lastname, String email, LocalDate birthday, Job job) {
         this.rfc = rfc;
         this.name = name;
         this.lastname = lastname;
